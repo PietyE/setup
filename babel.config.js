@@ -1,4 +1,4 @@
-const production = process.env.NODE_ENV === 'development'
+const development = process.env.NODE_ENV === 'development'
 
 module.exports = function(api) {
   api.cache(true)
@@ -8,7 +8,7 @@ module.exports = function(api) {
         "useBuiltIns": "usage"
       }],
       ["@babel/preset-react", {
-        "development": production
+        "development": development
       }]
   ]
 
