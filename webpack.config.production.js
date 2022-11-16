@@ -1,5 +1,5 @@
 const path = require("path")
-const merge = require("webpack-merge")
+const { merge } = require("webpack-merge")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { DefinePlugin } = require("webpack")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
@@ -59,34 +59,7 @@ module.exports = merge(baseConfig, {
                 minifyURLs: true
             }
         }),
-        new TerserPlugin({
-            terserOptions: {
-                parse: {
-                    // We want terser to parse ecma 8 code. However, we don't want it
-                    // to apply minification steps that turns valid ecma 5 code
-                    // into invalid ecma 5 code. This is why the `compress` and `output`
-                    ecma: 8,
-                },
-                compress: {
-                    ecma: 5,
-                    warning: false,
-                    inline: 2,
-                },
-                mangle: {
-                    // Find work around for Safari 10+
-                    safari10: true,
-                },
-                output: {
-                    ecma: 5,
-                    comments: false,
-                    ascii__only: true,
-                }
-            },
-            // Use multi-process parallel running to improve the build speed
-            parallel: true,
-            // Enable file caching
-            cache: true,
-        })
+
     ],
     optimization: {
         minimizer: [
@@ -101,6 +74,12 @@ module.exports = merge(baseConfig, {
                     ],
                 },
             }),
+            new TerserPlugin({
+                terserOptions: {
+                    compress: true
+                },
+                parallel: true,
+            })
         ],
     },
 })
