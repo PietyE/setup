@@ -13,8 +13,16 @@ module.exports = function(api) {
       }],
       ["@babel/preset-react", {
         "development": development
+      }],
+      ["@babel/preset-typescript", {
+        "onlyRemoveTypeImports": true
       }]
   ]
 
   return { presets }
 }
+//Indicates that every file should be parsed as TS, TSX,
+// or as TS without JSX ambiguities (depending on the isTSX and disallowAmbiguousJSXLike options).
+//allExtensions
+//onlyRemoveTypeImports
+//add if we want to use optimization for enums optimizeConstEnums
