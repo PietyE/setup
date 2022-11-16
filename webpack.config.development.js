@@ -1,5 +1,6 @@
 const path = require("path")
 const { DefinePlugin } = require("webpack")
+const { ProvidePlugin } = require("webpack")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,15 +10,13 @@ module.exports = {
     devServer: {
         port: 3000,
         hot: true,
-        https: true,
         liveReload: false,
         open: true,
         //enabling history for SPA
         historyApiFallback: true
     },
     entry: {
-        path: path.resolve(__dirname, "./src/index.js"),
-        filename: "bundle.js"
+        bundle: path.resolve(__dirname, "./src/index.js")
     },
     output: {
         path: path.resolve(__dirname, "./build"),
@@ -60,8 +59,12 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     plugins: [
+        new ProvidePlugin({
+            process: 'process/browser'
+        }),
         new DefinePlugin({
-            PUBLIC_URL: path.resolve(__dirname, './public')
+            'process.env.NODE_ENV': JSON.stringify("development"),
+            'process.env.PUBLIC_URL': JSON.stringify(path.resolve(__dirname, "./public"))
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',

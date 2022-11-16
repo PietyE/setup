@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config=webpack.config.development.js",
+    "build": "webpack --config=webpack.config.development.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
