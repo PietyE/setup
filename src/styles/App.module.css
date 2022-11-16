@@ -1,0 +1,11 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 20px;
+    background: aquamarine;
+}
+
+.text {
+    font-size: 3rem;
+    font-weight: 900;
+}
