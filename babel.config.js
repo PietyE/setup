@@ -12,7 +12,9 @@ module.exports = function(api) {
           "corejs": 3
       }],
       ["@babel/preset-react", {
-        "development": development
+        "development": development,
+          //add to exclude react importing ( from v17)
+          "runtime": "automatic"
       }],
       ["@babel/preset-typescript", {
         "onlyRemoveTypeImports": true
