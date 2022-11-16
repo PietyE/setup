@@ -29,6 +29,7 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     plugins: [
+        //to identify process.env while building
         new ProvidePlugin({
             process: 'process/browser'
         }),

@@ -12,6 +12,7 @@ module.exports = merge(baseConfig, {
     mode: "production",
     output: {
         path: path.resolve(__dirname, "./build"),
+        //to add cash for browser
         filename: "[name].[contenthash].js",
     },
     module: {
@@ -20,6 +21,7 @@ module.exports = merge(baseConfig, {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
+                    //to create css files into the files for each js file
                     MiniCssExtractPlugin.loader, {
                         loader: "css-loader",
                         options: {

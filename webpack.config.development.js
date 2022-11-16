@@ -13,6 +13,7 @@ module.exports = merge(baseConfig, {
         hot: true,
         liveReload: false,
         open: true,
+        //for SPA application
         historyApiFallback: true
     },
     output: {
@@ -28,6 +29,7 @@ module.exports = merge(baseConfig, {
                     "style-loader", {
                         loader: "css-loader",
                         options: {
+                            //if you want to use only module css switch to true
                             modules: undefined,
                         }
                     }
