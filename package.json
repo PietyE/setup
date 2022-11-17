@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config=webpack.config.development.js",
-    "build": "webpack --config=webpack.config.production.js"
+    "build": "webpack --config=webpack.config.production.js",
+    "prettier": "prettier --write .",
+    "eslint": "eslint --ext ts,tsx src",
+    "prepare": "husky install",
+    "pre-commit": "npx lint-staged"
   },
   "keywords": [],
   "author": "",
