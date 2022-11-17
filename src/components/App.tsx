@@ -10,7 +10,7 @@ const App: FC = () => (
       alt='logo'
       width='200px'
       height='200px'
-      asd
+      asds
     />
   </div>
 );
