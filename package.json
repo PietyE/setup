@@ -9,7 +9,8 @@
     "prettier": "prettier --write .",
     "eslint": "eslint --ext ts,tsx src",
     "prepare": "husky install",
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npx branch-name-lint branchlint.config.json"
   },
   "keywords": [],
   "author": "",

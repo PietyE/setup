@@ -58,7 +58,8 @@
           }
         ],
         "pathGroupsExcludedImportTypes": ["react", "./**/*.scss", "**/*css"],
-        "warnOnUnassignedImports": true
+        "warnOnUnassignedImports": true,
+        "newlines-between": "always"
       }
     ],
     "array-callback-return": "error",
