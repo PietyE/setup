@@ -50,7 +50,10 @@
     "prettier": "2.7.1",
     "prettier-eslint": "^15.0.1",
     "husky": "^8.0.2",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "branch-name-lint": "^2.1.1"
   },
   "dependencies": {
     "process": "^0.11.10",
