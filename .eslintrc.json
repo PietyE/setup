@@ -86,5 +86,13 @@
     "react-hooks/exhaustive-deps": "warn",
     "no-duplicate-imports": "warn",
     "default-case": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "tsconfig.json"
+      }
+    }
   }
 }
