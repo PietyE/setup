@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  react-webpack-build:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.production
+    ports:
+      - '8080:80'
+    volumes:
+      - .:/app
+    image: react-webpack-build

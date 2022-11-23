@@ -3,3 +3,6 @@ commitlint.config.ts
 node_modules
 .husky
 .lintstagedrc
+webpack.config.development.js
+webpack.config.production.js
+webpack.config.base.js
