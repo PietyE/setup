@@ -1,6 +1,14 @@
 name: webpack-react
 
-on: push
+on:
+  push:
+    branches:
+      - '**'
+    pull_request:
+      branches:
+        - master
+        - dev
+        - stage
 
 jobs:
   lint:
@@ -52,7 +60,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build, lint]
-    if: github.ref == 'refs/headers/master'
+    if: github.ref == 'refs/heads/master'
 
     strategy:
       matrix:

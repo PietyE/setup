@@ -6,7 +6,7 @@ const App: FC = () => {
   return (
     <div className={styles.container}>
       <p className={styles.text}>Hello React</p>
-      <p>test</p>
+      <p>TEST DEPLOY</p>
       <img
         src={`${process?.env.PUBLIC_URL ?? ''}/logo.png`}
         alt='logo'
