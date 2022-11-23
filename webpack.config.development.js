@@ -45,6 +45,7 @@ module.exports = merge(baseConfig, {
       'process.env.PUBLIC_URL': JSON.stringify(
         path.resolve(__dirname, './public'),
       ),
+      'process.env.PUBLIC_TEST': JSON.stringify('webpack test env dev'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
