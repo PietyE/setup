@@ -6,6 +6,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/codeStyles" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/inspectionProfiles" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/jsLinters" />
     </content>
     <content url="file://$MODULE_DIR$/node_modules" />
     <orderEntry type="inheritedJdk" />
