@@ -1,0 +1,6 @@
+name: webpack-react
+
+on: push
+
+jobs:
+
