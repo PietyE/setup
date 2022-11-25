@@ -8,12 +8,16 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    // should be break or default in switch case
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    // no files w/o exports imports
     "isolatedModules": true,
+    // do no add compile code for browser , source-maps etc , left it for babel
     "noEmit": true,
+    //transform jsx with jsx function jsx
     "jsx": "react-jsx",
     "baseUrl": "src",
     //to avoid undefined types
@@ -29,6 +33,7 @@
     },
     "plugins": [
       {
+        //for typescript config to recognize css modules
        "name": "typescript-plugin-css-modules",
       }
     ]

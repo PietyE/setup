@@ -1,14 +1,6 @@
 name: webpack-react
 
-on:
-  push:
-    branches:
-      - '**'
-    pull_request:
-      branches:
-        - master
-        - dev
-        - stage
+on: [push, pull_request]
 
 jobs:
   lint:
